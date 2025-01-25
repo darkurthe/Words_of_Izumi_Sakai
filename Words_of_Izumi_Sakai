@@ -1,0 +1,48 @@
+from random import choice
+import sys
+
+def display_song():
+    songs = [
+        {
+            "title": "Makenaide",
+            "lyrics": "In a sudden moment, it came into sight\nYou probably remember the thrill of happiness\nWe made love in the pastel colored season\nThe way you shined back then\nI want you to stay like that\n\nDon't give up, just a bit further\nKeep on running until the end\nNo matter how apart we are\nMy heart is always by your side\nChase after it, that distant dream\n\n'Something's up,' I say with a mischievous face\nSomehow I'll show you I can joke around\n'Tonight, why don't you dance with me?'\nEven now, I loved that about you\nDon't forget that\n\nDon't give up, hey, over there\nYou're getting close to your goal\nNo matter how apart we are\nMy heart is always by your side\nFeel it, my eyes watching over you\n\nDon't give up, just a bit further\nKeep on running until the end\nNo matter how apart we are\nMy heart is always by your side\nChase after it, that distant dream\n\nDon't give up, hey, over there\nYou're getting close to your goal\nNo matter how apart we are\nMy heart is always by your side\nFeel it, my eyes watching over you"
+        },
+        {
+            "title": "Yureru Omoi",
+            "lyrics": "I feel these swaying thoughts through my whole body\nI want to keep walking with you, in your dreams\n\nSummer is stealthily approaching\nThe glittering waves moisten the sandy beach\nI'll throw away all those things I'm attatched to\nBecause I've decided it's you\n\nI'd half given up on finding\nA person who would match someone like me\n\nI feel these swaying thoughts through my whole body\nI want you to stay close to me like this forever\nIt's become clear, just like that sky\nI want to keep walking with you, in your dreams\n\nYour eyes send a signal of love\nI made as if to look into them, then kissed you\nWas it that I was afraid you'd see everything\nThat I've been running from your kindness?\n\nThat our meeting was fate is certain\nAnd it's changed me quite a bit\n\nI feel these swaying thoughts through my whole body\nI want you to stay close to me like this forever\nNo matter how many lonely seasons come\nI want to embrace the anxiety, in my dreams\n\nI feel these swaying thoughts through my whole body\nI want you to stay close to me like this forever\nIt's become clear, just like that sky\nI want to keep walking with you, in our dreams"
+        },
+        {
+            "title": "Iki mo Dekinai",
+            "lyrics": "I'm so in raptures over you\nThat I can't even breathe\nEven when we're apart\nI feel like I'm in your arms\n\nWhen I listen carefully\nI can hear your heart beat\nIt's a sound that in the whole world\nOnly I'm hearing\nEven though those times when I'm alone\nOr those things that I'll talk frankly about\nTo my friends or family\nAre such important times\n\nI'm so in love with you\nI can't even breathe\nThough I sometimes become timid\nWhen I remember past failures in love\nI see the silhouette of your face in the evening sun\nAnd I want to be forever by your side\nThe limits are still so far\nSo please fulfill this love\n\nWhen we were talking\nAbout love\nIn that moment, your smiling face\nGave me everything\nA doubting heart\nCan't put confused feelings to words\nWhat do I look like\nFrom where you are?\n\nWhen we're concerned about anything at all\nWe match each other so well\nEven though you're not understood\nPlease don't ever compromise\nIn my mind, the world\nIs gradually getting larger\nBecause I'm with the one\nWho I want to be closer to than anyone else\n\nI'm so in raptures over you\nThat I can't even breathe\nThe moon shining on the jet-coaster\nPierces through the darkness\nIt's okay if you cancel\nAll your plans for tomorrow\nThis time, it's the real thing\nIs it alright if we trust in God?\nWhen you take off your coat\nThat's when a new season will be set into motion"
+        },
+        {
+            "title": "Eien",
+            "lyrics": "If you ever see a red fruit\nPlease think about me\nIf your mind's made up...\nI think I'll become like shards of glittering glass\nAnd just disappear\nTo a paradise where no one knows me\n\nBetween the two of us now\nI wonder if we could see forever\nIf the only thing we have is love\nI won't be afraid\nOf losing you anymore\n\nDid you think I was a silly girl\nWho didn't know how to communicate?\nThough I suddenly see you in the streets\nI don't know whether or not to call out to you\nWhat is it that I need to protect?\nRecently, I've become confused about that\n\n'Between you and me\nI wonder if we could see forever'\nThis uphill climb seems to continue endlessly\nSince that day, I've been more lonely than I could imagine...\nJust fallin' of the rain\n\nBetween you and me\nI wonder if we could see forever\nWhen I pass through this gate\nI'll head towards your gentle arms\nUntil the day when I'll dream again"
+        },
+        {
+            "title": "Good-bye My Loneliness",
+            "lyrics": "It seems like you've seen into my heart\nEven if I turn my eyes away, you still noticed\nThe raindrops in the foggy city\nI was shivering\nWhat I'm afraid of is becoming alone again\n\nGood-bye my loneliness\nI want to jump into\nThe gentle tenderness of your heart\nThat's why I want you near me now\nHold me, before our dreams disappear\n\nWhere our heartless love goes is left to the seasons\nYou can never see the future through the rain\nThe teardrops in the hazy city\nI'm becoming so cowardly\nI want you to rekindle these cold feelings\n\nGood-by my loneliness\nEven though I believe in you, we're faraway\nAnd fading to memories\nThat's why I want you near me now\nHold me and let me forget everything\n\nGood-by my loneliness\nEven though I believe in it, it's so faraway\nAnd fading to memories\nThat's why I don't want you to go now\nHold me, before our dreams disappear"
+        },
+        {
+            "title": "Don't You See!",
+            "lyrics": "Although it'd be nice if the words would come out fluently\nLike when I write a letter to a friend\nWhat I want is more time for us to get to know each other\nIt's so lonely when the only ones I won't betray\nAre my family; Love is asking to be loved\nThough I know that I'd be better off\nIf I stopped believing\n\nDon't you see!\nEven though I wish and pray for miracles and memories\nI'm a bit worried\nDon't you see!\nIf I act a little disillusioned\nIt's because I'm afraid of being hurt\n\nThe silence while we were waiting at the taxi stop\nWas only five minutes, but felt so much longer\nI never thought that our relationship\nWould have grown this tired and faded\n\nDon't you see!\nI'm relieved because we're the type of couple\nWho won't give up because of a small fight\nDon't you see!\nMore than seeing various other people\nI always want to see the same old you\n\nDon't you see! I'll never worry, tonight\nI'll lay me down tonight.\nYou know, I do it for you.\n\nDon't you see!\nThe smell of your town\nAs we walk beneath the roadside trees at dusk\nDon't you see!\nNo matter how much of a rush\nThe rest of the world is in, hold on to me"
+        },
+        {
+            "title": "Today is Another Day",
+            "lyrics": "The real reason why I can't act adorable\nIs that I know you don't choose me\nI hear familiar footsteps\nAnd turn around with an 'Ah,' but it was someone else\n\nI'm sure my heart is lonely\nI want to expect something people\nAnd hope for something\nAnd believe in something\nIf I could forget you\nI wonder if I could go on living\nI have tomorrow\n\nI heard from someone that you're good with words\nIs the weak person standing before me all a lie?\nWhen I start doubting, it never ends\nIt seems foolish, but even so I see your dreams\n\nI'm sure my heart is lonely\nI won't expect something from people\nOr hope for something\nOr want to believe in something\nInstead of lamenting the sad reality\nLet's think about what we can do now\nToday will challenge\n\nI'm sure my heart is lonely\nI won't expect something from people\nOr hope for something\nOr want to believe in something\nInstead of lamenting the sad reality\nLet's think about what we can do now\nToday will challenge\n\nToday Is Another Day"
+        },
+        {
+            "title": "Kokoro wo Hirate",
+            "lyrics": "It may just be that\nI'm not the person you're thinking of\nBut though it's strange\nWhen I hear your voice\nI feel so much more at ease\n\nI never want to forget this moment\nEven if reality changed to memory\nEven though you don't say it\nYou feel the same way, don't you\n\nHaving deep relationships\nWasn't something I was good at\nBut when I'm look at you I see\nYou're impatient, just like me\nSuch a thing must be irresistible love\n\nWe sat together and just watched the people\nWalking down the streets through a gap in the buildings\nThe passing of time saddened me\nAnd I snuggled against your shoulder\n\nMy dream Your smile\nThe more I try to forget, the more I come to love you\nEven though it's a misunderstanding...\nOpen up your heart\n\nNo matter when it is, I'll throw myself\nInto your arms, without losing my way\nYour dream, I believe\nSo open up your anxious heart"
+        }
+    ]
+
+    selected_song = choice(songs)
+
+    print(f"App Name: Words of Izumi")
+    print(f"Song Title: {selected_song['title']}")
+    print("Words by Izumi Sakai\n")
+    print(selected_song['lyrics'])
+
+if __name__ == "__main__":
+    display_song()
